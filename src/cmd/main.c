@@ -151,6 +151,18 @@ int main(void) {
   set_prop_if_diff("ro.force.debuggable", "0");
   set_prop_if_diff("ro.secure", "1");
 
+  /* Custom ROM props */
+  delete_prop_if_exist("ro.halcyon.device");
+  delete_prop_if_exist("ro.halcyon.version");
+  delete_prop_if_exist("ro.halcyon.build.version");
+  delete_prop_if_exist("ro.halcyon.build.number");
+  delete_prop_if_exist("ro.halcyon.build.type");
+  delete_prop_if_exist("ro.lineage.version");
+  delete_prop_if_exist("ro.lineage.display.version");
+  delete_prop_if_exist("ro.lineage.build.version");
+  delete_prop_if_exist("ro.lineage.releasetype");
+  /* Custom ROM props END */
+
   /* INFO: SafetyNet/Play Integrity + OEM */
   set_prop_if_diff("ro.secureboot.lockstate", "locked");
 
